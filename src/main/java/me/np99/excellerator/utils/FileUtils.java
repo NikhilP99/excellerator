@@ -12,6 +12,7 @@ public class FileUtils {
         try (FileOutputStream outputStream = new FileOutputStream(filename)){
             log.info("Saving file - {}", filename);
             workbook.write(outputStream);
+            workbook.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
